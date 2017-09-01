@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "Woody"
   s.version      = "0.1"
-  s.summary      = ""
+  s.summary      = "Woody is a Logging SDK for Vivint apps"
   s.description  = <<-DESC
     Your description here.
   DESC
-  s.homepage     = ""
+  s.homepage     = "https://source.vivint.com/users/kaden.wilkinson/repos/woody/browse"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Kaden Wilkinson" => "kaden.wilkinson@vivint.com" }
 

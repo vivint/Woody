@@ -9,8 +9,6 @@
 #ifndef Woody_h
 #define Woody_h
 
-#import "Woody-Swift.h"
-@import Foundation;
 
 #define NSLog(message, ...) [Woody logVerbose:[NSString stringWithFormat: message, ##__VA_ARGS__] filepath:[NSString stringWithUTF8String:__FILE__] function:[NSString stringWithUTF8String:__FUNCTION__] line:__LINE__]
 #define WLogVerbose(message, ...) [Woody logVerbose:[NSString stringWithFormat: message, ##__VA_ARGS__] filepath:[NSString stringWithUTF8String:__FILE__] function:[NSString stringWithUTF8String:__FUNCTION__] line:__LINE__]

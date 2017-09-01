@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		52D6D9871BEFF229002C0205 /* Woody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* Woody.framework */; };
+		6E456F3D1F5A20C000C966A2 /* Woody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1AB8091F5A07A30050050C /* Woody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E456F3E1F5A20CD00C966A2 /* Woody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1AB8091F5A07A30050050C /* Woody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E456F3F1F5A20F900C966A2 /* Woody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1AB8091F5A07A30050050C /* Woody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E456F401F5A210000C966A2 /* Woody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1AB8091F5A07A30050050C /* Woody.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8933C7851EB5B820000D00A4 /* Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Woody.swift */; };
 		8933C7861EB5B820000D00A4 /* Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Woody.swift */; };
 		8933C7871EB5B820000D00A4 /* Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Woody.swift */; };
@@ -188,6 +192,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E456F3D1F5A20C000C966A2 /* Woody.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +200,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E456F3F1F5A20F900C966A2 /* Woody.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +208,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E456F401F5A210000C966A2 /* Woody.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +216,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E456F3E1F5A20CD00C966A2 /* Woody.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
