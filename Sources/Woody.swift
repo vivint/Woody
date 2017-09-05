@@ -27,7 +27,7 @@ import Foundation
     }
 
     /// This should never be set by a framework
-    public static var delegate: WoodyDelegate?
+    @objc public static var delegate: WoodyDelegate?
 
     @objc(logVerbose:filepath:function:line:)
     public static func verbose(_ message: String, filepath: String = #file, function: String = #function, line: Int = #line) {
