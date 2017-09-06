@@ -12,6 +12,9 @@
 		6E456F3E1F5A20CD00C966A2 /* Woody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1AB8091F5A07A30050050C /* Woody.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E456F3F1F5A20F900C966A2 /* Woody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1AB8091F5A07A30050050C /* Woody.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E456F401F5A210000C966A2 /* Woody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1AB8091F5A07A30050050C /* Woody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EA99BE51F5F137500DDB66A /* TestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA99BE41F5F137500DDB66A /* TestDelegate.swift */; };
+		6EA99BE61F5F137500DDB66A /* TestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA99BE41F5F137500DDB66A /* TestDelegate.swift */; };
+		6EA99BE71F5F137500DDB66A /* TestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA99BE41F5F137500DDB66A /* TestDelegate.swift */; };
 		8933C7851EB5B820000D00A4 /* Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Woody.swift */; };
 		8933C7861EB5B820000D00A4 /* Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Woody.swift */; };
 		8933C7871EB5B820000D00A4 /* Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Woody.swift */; };
@@ -54,6 +57,7 @@
 		52D6D9F01BEFFFBE002C0205 /* Woody.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Woody.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* Woody.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Woody.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1AB8091F5A07A30050050C /* Woody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Woody.h; sourceTree = "<group>"; };
+		6EA99BE41F5F137500DDB66A /* TestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDelegate.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* Woody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Woody.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* WoodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoodyTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* Woody.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Woody.plist; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8933C7891EB5B82A000D00A4 /* WoodyTests.swift */,
+				6EA99BE41F5F137500DDB66A /* TestDelegate.swift */,
 			);
 			name = Tests;
 			path = Tests/WoodyTests;
@@ -477,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA99BE51F5F137500DDB66A /* TestDelegate.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* WoodyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA99BE61F5F137500DDB66A /* TestDelegate.swift in Sources */,
 				8933C78F1EB5B82C000D00A4 /* WoodyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA99BE71F5F137500DDB66A /* TestDelegate.swift in Sources */,
 				8933C78E1EB5B82C000D00A4 /* WoodyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
