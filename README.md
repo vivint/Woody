@@ -68,23 +68,23 @@ You need to setup a delegate to get called whenever a log happens
 ```swift
 class LoggingDelegate: WoodyDelegate {
     func verbose(_ msg: String, filepath: String, function: String, line: Int) {
-		print("VERBOSE: \(filepath).\(function): \(line) - \(msg)")
+	print("VERBOSE: \(filepath).\(function): \(line) - \(msg)")
     }
 
     func debug(_ msg: String, filepath: String, function: String, line: Int) {
-		print("DEBUG: \(filepath).\(function): \(line) - \(msg)")
+	print("DEBUG: \(filepath).\(function): \(line) - \(msg)")
     }
 
     func info(_ msg: String, filepath: String, function: String, line: Int) {
-		print("INFO: \(filepath).\(function): \(line) - \(msg)")
+	print("INFO: \(filepath).\(function): \(line) - \(msg)")
     }
 
     func warning(_ msg: String, filepath: String, function: String, line: Int) {
-		print("WARNING: \(filepath).\(function): \(line) - \(msg)")
+	print("WARNING: \(filepath).\(function): \(line) - \(msg)")
     }
 
     func error(_ msg: String, filepath: String, function: String, line: Int) {
-		print("ERROR: \(filepath).\(function): \(line) - \(msg)")
+	print("ERROR: \(filepath).\(function): \(line) - \(msg)")
     }
 }
 ```
