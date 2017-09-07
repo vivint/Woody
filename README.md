@@ -2,6 +2,24 @@
 
 Woody is a micro logging framework that helps decouple which logging framework the end client (usually an app) would like to use.  For example you have multiple in house frameworks which are used across multiple different apps and you don't want to tie them all to a specific logging framework like [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) or [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver).  Woody allows you to not worry about that when developing those in house frameworks and instead leaves that up to the end consumer of your framework.
 
+## Usage
+
+```swift
+import Woody
+
+let log = Woody.self
+
+log.verbose("Verbose message")
+log.info("Info message")
+log.debug("Debug message")
+log.warning("Warning message")
+log.error("Error message")
+```
+
+## Setup
+
+Below are two guides for use in either a framework or app target
+
 ### Frameworks
 
 The easiest way to get started using Woody in a framework is to add a `Logging.swift` file like this:
