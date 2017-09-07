@@ -1,8 +1,10 @@
 # Woody
 
-Woody is a micro logging framework that helps decouple which logging framework the end client (usually an app) would like to use.  For example you have multiple in house frameworks which are used across multiple different apps and you don't want to tie them all to a specific logging framework like [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) or [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver).  Woody allows you to not worry about that when developing those in house frameworks and instead leaves that up to the end consumer of your framework.
+Woody is a micro logging framework with support for Swift & Objective-C that helps decouple which logging framework the end client (usually an app) would like to use.  For example you have multiple in house frameworks which are used across multiple different apps and you don't want to tie them all to a specific logging framework like [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) or [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver).  Woody allows you to not worry about that when developing those in house frameworks and instead leaves that up to the end consumer of your framework.
 
 ## Usage
+
+### Swift
 
 ```swift
 import Woody
@@ -16,7 +18,37 @@ log.warning("Warning message")
 log.error("Error message")
 ```
 
+### Objective-C
+
+```objc
+@import Woody;
+
+WLogVerbose(@"Verbose message");
+WLogInfo(@"Info message");
+WLogDebug(@"Debug message");
+WLogWarning(@"Warning message");
+WLogError(@"Error message");
+```
+
 ## Setup
+
+### Install
+
+This library supports both Carthage and CocoaPods
+
+#### CocoaPods
+
+Add this line to your Podfile
+```ruby
+pod 'Woody'
+```
+
+#### Carthage
+
+Add this line to your Cartfile
+```
+github "vivint/Woody" ~> "0.1.0"
+```
 
 Below are two guides for use in either a framework or app target
 
