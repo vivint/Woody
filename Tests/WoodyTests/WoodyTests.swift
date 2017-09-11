@@ -29,8 +29,8 @@ class WoodyTests: XCTestCase {
 
         let log = Log(message: "Verbose", filepath: "\(currentDir())/WoodyTests.swift", function: "testVerboseLog()", line: 28)
 
-        XCTAssert(testDelegate.verboseLogs.count == 1)
-        XCTAssert(testDelegate.verboseLogs[0] == log)
+        XCTAssertEqual(testDelegate.verboseLogs.count, 1)
+        XCTAssertEqual(testDelegate.verboseLogs[0], log)
     }
 
     func testDebugLog() {
@@ -38,8 +38,8 @@ class WoodyTests: XCTestCase {
 
         let log = Log(message: "Debug", filepath: "\(currentDir())/WoodyTests.swift", function: "testDebugLog()", line: 37)
 
-        XCTAssert(testDelegate.debugLogs.count == 1)
-        XCTAssert(testDelegate.debugLogs[0] == log)
+        XCTAssertEqual(testDelegate.debugLogs.count, 1)
+        XCTAssertEqual(testDelegate.debugLogs[0], log)
     }
 
     func testInfoLog() {
@@ -47,8 +47,8 @@ class WoodyTests: XCTestCase {
 
         let log = Log(message: "Info", filepath: "\(currentDir())/WoodyTests.swift", function: "testInfoLog()", line: 46)
 
-        XCTAssert(testDelegate.infoLogs.count == 1)
-        XCTAssert(testDelegate.infoLogs[0] == log)
+        XCTAssertEqual(testDelegate.infoLogs.count, 1)
+        XCTAssertEqual(testDelegate.infoLogs[0], log)
     }
 
     func testWarningLog() {
@@ -56,8 +56,8 @@ class WoodyTests: XCTestCase {
 
         let log = Log(message: "Warning", filepath: "\(currentDir())/WoodyTests.swift", function: "testWarningLog()", line: 55)
 
-        XCTAssert(testDelegate.warningLogs.count == 1)
-        XCTAssert(testDelegate.warningLogs[0] == log)
+        XCTAssertEqual(testDelegate.warningLogs.count, 1)
+        XCTAssertEqual(testDelegate.warningLogs[0], log)
     }
 
     func testErrorLog() {
@@ -65,8 +65,33 @@ class WoodyTests: XCTestCase {
 
         let log = Log(message: "Error", filepath: "\(currentDir())/WoodyTests.swift", function: "testErrorLog()", line: 64)
 
-        XCTAssert(testDelegate.errorLogs.count == 1)
-        XCTAssert(testDelegate.errorLogs[0] == log)
+        XCTAssertEqual(testDelegate.errorLogs.count, 1)
+        XCTAssertEqual(testDelegate.errorLogs[0], log)
+    }
+
+    func testMissingDelegate() {
+        var loggedMessage = ""
+        func defaultLogger(_ message: String) {
+            loggedMessage = message
+        }
+
+        Woody.delegate = nil
+        Woody.defaultLogger = defaultLogger
+
+        Woody.verbose("Verbose")
+        XCTAssertEqual(loggedMessage, "[VERBOSE] WoodyTests.testMissingDelegate(): 81 - Verbose")
+
+        Woody.debug("Debug")
+        XCTAssertEqual(loggedMessage, "[DEBUG] WoodyTests.testMissingDelegate(): 84 - Debug")
+
+        Woody.info("Info")
+        XCTAssertEqual(loggedMessage, "[INFO] WoodyTests.testMissingDelegate(): 87 - Info")
+
+        Woody.warning("Warning")
+        XCTAssertEqual(loggedMessage, "[WARNING] WoodyTests.testMissingDelegate(): 90 - Warning")
+
+        Woody.error("Error")
+        XCTAssertEqual(loggedMessage, "[ERROR] WoodyTests.testMissingDelegate(): 93 - Error")
     }
     
     static var allTests = [
@@ -75,6 +100,7 @@ class WoodyTests: XCTestCase {
         ("testInfoLog", testInfoLog),
         ("testWarningLog", testWarningLog),
         ("testErrorLog", testErrorLog),
+        ("testMissingDelegate", testMissingDelegate),
     ]
 }
 

@@ -29,28 +29,66 @@ import Foundation
     /// This should never be set by a framework
     @objc public static var delegate: WoodyDelegate?
 
+    /// This is used when the delegate hasn't been set yet
+    /// Keep internal for now until we know API is stable
+    @objc static var defaultLogger: (String) -> Void = { message in
+        NSLog(message)
+    }
+
     @objc(logVerbose:filepath:function:line:)
     public static func verbose(_ message: String, filepath: String = #file, function: String = #function, line: Int = #line) {
-        delegate?.verbose?(message, filepath: filepath, function: function, line: line)
+        guard let d = delegate else {
+            defaultLogger("[VERBOSE] \(filename(from: filepath)).\(function): \(line) - \(message)")
+            return
+        }
+        d.verbose?(message, filepath: filepath, function: function, line: line)
     }
 
     @objc(logDebug:filepath:function:line:)
     public static func debug(_ message: String, filepath: String = #file, function: String = #function, line: Int = #line) {
-        delegate?.debug?(message, filepath: filepath, function: function, line: line)
+        guard let d = delegate else {
+            defaultLogger("[DEBUG] \(filename(from: filepath)).\(function): \(line) - \(message)")
+            return
+        }
+        d.debug?(message, filepath: filepath, function: function, line: line)
     }
 
     @objc(logInfo:filepath:function:line:)
     public static func info(_ message: String, filepath: String = #file, function: String = #function, line: Int = #line) {
-        delegate?.info?(message, filepath: filepath, function: function, line: line)
+        guard let d = delegate else {
+            defaultLogger("[INFO] \(filename(from: filepath)).\(function): \(line) - \(message)")
+            return
+        }
+        d.info?(message, filepath: filepath, function: function, line: line)
     }
 
     @objc(logWarning:filepath:function:line:)
     public static func warning(_ message: String, filepath: String = #file, function: String = #function, line: Int = #line) {
-        delegate?.warning?(message, filepath: filepath, function: function, line: line)
+        guard let d = delegate else {
+            defaultLogger("[WARNING] \(filename(from: filepath)).\(function): \(line) - \(message)")
+            return
+        }
+        d.warning?(message, filepath: filepath, function: function, line: line)
     }
 
     @objc(logError:filepath:function:line:)
     public static func error(_ message: String, filepath: String = #file, function: String = #function, line: Int = #line) {
-        delegate?.error?(message, filepath: filepath, function: function, line: line)
+        guard let d = delegate else {
+            defaultLogger("[ERROR] \(filename(from: filepath)).\(function): \(line) - \(message)")
+            return
+        }
+        d.error?(message, filepath: filepath, function: function, line: line)
+    }
+
+    private static func filename(from path: String, extensionIncluded: Bool = false) -> String {
+        let filename = (path as NSString).lastPathComponent
+        if !extensionIncluded {
+            let fileNameComponents = filename.components(separatedBy: ".")
+            if let firstComponent = fileNameComponents.first {
+                return firstComponent
+            }
+            return filename
+        }
+        return filename
     }
 }
