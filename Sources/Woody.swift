@@ -17,7 +17,7 @@ import Foundation
     @objc optional func error(_ msg: String, filepath: String, function: String, line: Int)
 }
 
-@objc public class Woody: NSObject {
+@objcMembers public class Woody: NSObject {
     @objc public enum Level: Int {
         case verbose
         case debug
