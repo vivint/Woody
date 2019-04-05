@@ -2,8 +2,8 @@
 //  Woody.h
 //  Woody
 //
-//  Created by Spencer Gibby on 4/4/19.
-//  Copyright © 2019 Vivint. All rights reserved.
+//  Created by Kaden Wilkinson on 9/1/17.
+//  Copyright © 2019 Vivint.SmartHome. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

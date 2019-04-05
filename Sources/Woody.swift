@@ -17,17 +17,6 @@ import Foundation
     @objc optional func error(_ msg: String, filepath: String, function: String, line: Int)
 }
 
-@objcMembers public class WoodyTestClass : NSObject {
-    private override init() {
-        
-    }
-    let tempBool = true
-    public static let testBool: Bool = false
-    public class func testFunc() -> String {
-        return "Blah"
-    }
-}
-
 @objcMembers public class Woody: NSObject {
     @objc public enum Level: Int {
         case verbose
@@ -37,7 +26,7 @@ import Foundation
         case error
     }
 
-    /// This should never be set by a framework, yo
+    /// This should never be set by a framework
     @objc public static var delegate: WoodyDelegate?
 
     /// This is used when the delegate hasn't been set yet
