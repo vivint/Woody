@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
+               BlueprintIdentifier = "096B6C48225795790096BE64"
                BuildableName = "Woody.framework"
                BlueprintName = "Woody-watchOS"
                ReferencedContainer = "container:Woody.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
+            BlueprintIdentifier = "096B6C48225795790096BE64"
             BuildableName = "Woody.framework"
             BlueprintName = "Woody-watchOS"
             ReferencedContainer = "container:Woody.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
+            BlueprintIdentifier = "096B6C48225795790096BE64"
             BuildableName = "Woody.framework"
             BlueprintName = "Woody-watchOS"
             ReferencedContainer = "container:Woody.xcodeproj">

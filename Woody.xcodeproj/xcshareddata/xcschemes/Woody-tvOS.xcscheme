@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+               BlueprintIdentifier = "096B6C2E225794DB0096BE64"
                BuildableName = "Woody.framework"
                BlueprintName = "Woody-tvOS"
                ReferencedContainer = "container:Woody.xcodeproj">
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD75028C1C690C7A006590AF"
-               BuildableName = "Woody-tvOS Tests.xctest"
-               BlueprintName = "Woody-tvOS Tests"
-               ReferencedContainer = "container:Woody.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
-            BuildableName = "Woody.framework"
-            BlueprintName = "Woody-tvOS"
-            ReferencedContainer = "container:Woody.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+            BlueprintIdentifier = "096B6C2E225794DB0096BE64"
             BuildableName = "Woody.framework"
             BlueprintName = "Woody-tvOS"
             ReferencedContainer = "container:Woody.xcodeproj">
@@ -82,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+            BlueprintIdentifier = "096B6C2E225794DB0096BE64"
             BuildableName = "Woody.framework"
             BlueprintName = "Woody-tvOS"
             ReferencedContainer = "container:Woody.xcodeproj">
